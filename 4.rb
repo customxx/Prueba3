@@ -4,10 +4,11 @@ class Complejo
  @y = y
  end
 
- def a(complejo)
- Complejo.new(@x + complejo, @y + complejo)
+ def +(complejo)
+	Complejo.new(@x + complejo.to_i, @y + complejo.to_i)
+	 
  end
 end
 
 c = Complejo.new(1,2)
-c.a(1)
+puts c.+(1)
